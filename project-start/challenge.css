@@ -30,7 +30,7 @@ a {
   
   .nav-links {
     /* Make Links Take Less Space */
-    font-size: .5em;
+    font-size: .7em;
     padding: 0;
 
   }
@@ -42,15 +42,19 @@ a {
   margin-left: auto;
 }
 
+
+
 /* ************************************ */
 /* Cover */
 /* ************************************ */
 
-.red {
+.cover-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 500px;
+  
+  /* Make Cover Responsive by making it 50% of ViewPort Height */
+  height: 50vh;
 }
 
 .img-grid {
