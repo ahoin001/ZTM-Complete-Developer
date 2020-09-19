@@ -1,42 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ************************************ */
 /* Nav */
 /* ************************************ */
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
-
-  margin: 0;
-
-  font-size: 0.7em;
 }
 
-li {
-  padding: 20px;
-}
-
-a {
-  color: #f5f5f6;
+.nav-links a {
+  color: aliceblue;
   text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
-  .nav-links {
-    /* Make Links Take Less Space */
-    font-size: 0.7em;
-    padding: 0;
-  }
+.nav-links li {
+  padding: 25px;
 }
 
-/* Keeps Link Pushed To The Right Responsively */
-.push {
+.nav-links li:last-child {
   margin-left: auto;
+}
+
+@media only screen and (max-width: 620px) {
+  .nav-links {
+    font-size: 0.7em;
+  }
 }
 
 /* ************************************ */
@@ -47,32 +52,45 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Make Cover Responsive by making it 50% of ViewPort Height */
   height: 50vh;
 }
 
+.cover {
+  width: 30rem;
+}
+
 /* ************************************ */
-/* Cover */
+/* IMG GRID */
 /* ************************************ */
+
+.img-container:hover {
+  -webkit-transform: rotate(-7deg);
+  -moz-transform: rotate(-7deg);
+  -o-transform: rotate(-7deg);
+  transform: rotate(-4deg);
+}
+
 .img-grid {
-display: grid;
-gap:20px;
-
-grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
-
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
 
 .img-container {
   background-color: #444;
-  padding: 130px;
-  margin: 20px;
+
+  padding: 90px;
+  margin: 20px 20px;
+}
+
+img {
+  width: 100%;
 }
 
 /* Make images child of img containers the same width of their respective grid box */
-.img-container > img {
-  width: 100%;
-}
+
+/* ************************************ */
+/* Footer */
+/* ************************************ */
 
 footer {
   text-align: center;
